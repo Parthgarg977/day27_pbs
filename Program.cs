@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace File_IO
+namespace day27_pbs
 {
     public class Program
     {
@@ -18,7 +18,7 @@ namespace File_IO
                 int read = int.Parse(Console.ReadLine());
                 switch (read)
                 {
-                    case 1:        //For Adding Details to Address Book
+                    case 1:    
                         {
                             Person person = new Person();
                             Console.WriteLine("Enter First Name: ");
@@ -36,7 +36,7 @@ namespace File_IO
                             manager.addPerson(person);
                         }
                         break;
-                    case 2:    //Display contact list of addressbook
+                    case 2:   
                         {
                             manager.Display();
                         }
