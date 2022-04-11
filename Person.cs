@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace day27_pbs
+namespace day27pbs
 {
-    public class Person
+    public class day27pbs
     {
         public string FirstName;
         public string LastName;
@@ -24,16 +24,16 @@ namespace day27_pbs
     public class AddressBook
     {
 
-        public List<Person> person = new List<Person>(); 
+        public List<day27pbs> person = new List<day27pbs>(); 
         public AddressBook()
         {
             string json = File.ReadAllText(@"E:\BridgeLabzAssignment\day27_pbs\File.json");
             if (json.Length > 0)
             {
-                person = JsonConvert.DeserializeObject<List<Person>>(json);
+                person = JsonConvert.DeserializeObject<List<day27pbs>>(json);
             }
             else
-                person = new List<Person>();
+                person = new List<day27pbs>();
         }
 
         public void Display() 
@@ -43,13 +43,13 @@ namespace day27_pbs
                 Console.WriteLine("Please add Some Contact list First");
             }
             Console.WriteLine("Welcome to Program");
-            foreach (Person per in person)
+            foreach (day27pbs per in person)
             {
                 Console.WriteLine(per.Result());
             }
         }
 
-        public void addPerson(Person p)  
+        public void addday27pbs(day27pbs p)  
         {
             person.Add(p);
             string jsonData = JsonConvert.SerializeObject(person);
