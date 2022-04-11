@@ -49,7 +49,7 @@ namespace day27pbs
             }
         }
 
-        public void addday27pbs(day27pbs p)  
+        public void add day27pbs(day27pbs p)  
         {
             person.Add(p);
             string jsonData = JsonConvert.SerializeObject(person);
