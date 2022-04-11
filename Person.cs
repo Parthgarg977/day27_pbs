@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace File_IO
+namespace day27_pbs
 {
     public class Person
     {
@@ -24,10 +24,10 @@ namespace File_IO
     public class AddressBook
     {
 
-        public List<Person> person = new List<Person>(); //creating list
-        public AddressBook()  //Address Book method
+        public List<Person> person = new List<Person>(); 
+        public AddressBook()
         {
-            string json = File.ReadAllText(@"E:\BridgeLabzAssignment\Day27_Problems\File_IO\File_IO\File.json");
+            string json = File.ReadAllText(@"E:\BridgeLabzAssignment\day27_pbs\File.json");
             if (json.Length > 0)
             {
                 person = JsonConvert.DeserializeObject<List<Person>>(json);
@@ -36,7 +36,7 @@ namespace File_IO
                 person = new List<Person>();
         }
 
-        public void Display()  //Display Method
+        public void Display() 
         {
             if (person.Count == 0)
             {
@@ -49,11 +49,11 @@ namespace File_IO
             }
         }
 
-        public void addPerson(Person p)  //Adding Contact list method
+        public void addPerson(Person p)  
         {
             person.Add(p);
             string jsonData = JsonConvert.SerializeObject(person);
-            File.WriteAllText(@"E:\BridgeLabzAssignment\Day27_Problems\File_IO\File_IO\File.json", jsonData);
+            File.WriteAllText(@"E:\BridgeLabzAssignment\day27_pbs\File.json", jsonData);
         }
     }
 }
