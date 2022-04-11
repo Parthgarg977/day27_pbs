@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace day27_pbs
+namespace day27pbs
 {
     public class Program
     {
@@ -20,7 +20,7 @@ namespace day27_pbs
                 {
                     case 1:    
                         {
-                            Person person = new Person();
+                            day27pbs person = new day27pbs();
                             Console.WriteLine("Enter First Name: ");
                             string firstname = Console.ReadLine();
                             person.FirstName = firstname;
@@ -33,7 +33,7 @@ namespace day27_pbs
                             Console.WriteLine("Enter Phone Number: ");
                             long number = long.Parse(Console.ReadLine());
                             person.PhoneNumber = number;
-                            manager.addPerson(person);
+                            manager.addday27pbs(person);
                         }
                         break;
                     case 2:   
